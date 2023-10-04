@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="eventCardStyle.css">
+    
+    <title>Home Page</title>
+</head>
+<body>
+    <header class="banner top-banner">
+        <!-- Banner content here -->
+        <img src="/img/olympics.png" style="width:70px;height:70px;">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img id="userid" src="/img/profile.png" alt="#">
+            <h1 id="userid">UserID</h1>
+            <div class="sideimg">
+                <img id="btn" src="/img/profile.png" alt="#"><a href="profile.html" id="profilenav">Profile</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="/img/settings.png" alt="#"><a href="settings.html" id="settingsnav">Settings</a>
+            </div>
+            <div class="sideimg">
+                <img id="btn" src="/img/information.png" alt="#"><a href="faq.html" id="faqnav">FAQ</a>
+            </div>
+            <!-- <a href="javascript:void(0)" class="subnav" onclick="toggleSubNav()">#</a>
+            <div id="subNavContent" class="subnav-content">
+                <a href="#">#</a>
+                <a href="#">#</a>
+                <a href="#">#</a>
+            </div> -->
+          </div>
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="topleft">&#9776;</span>
+    </header>
+
+    <main class="content">
+        <div class="body">
+            <div class="search-overlay" id="search-overlay">
+                <div class="search-bar">
+                    <input class="nosubmit" id="main-search-box" type="search" placeholder="Search...">
+                    <button type="button" id="main-search-box-button">Search</button>
+                </div>
+                <div class="suggestions-box" id="suggestions-box">
+                    
+                </div>
+            </div>
+            <div class="centered-search-box">
+                <form class="nosubmit">
+                    <input class="nosubmit" id="home-search-box" type="search" placeholder="Search...">
+                </form>
+            </div>
+        <!-- Main content here -->
+        <select name="language" id="languageSelector" style="display: none;">
+            <option value="en">English</option>
+            <option value="zh">中国語</option>
+            <option value="ja">日本語</option>
+            <option value="ko">한국어</option>
+        </select>
+        
+            <h2 id="recevent">Recommended Events</h2>    
+            <section class="event-section"> 
+                <!-- Add upcoming event content here -->
+                <ol class="event">
+
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/test0.jpeg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Men's 200 meters</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>24 July</p>
+                                <p>The Gabba</p>
+                            </div> 
+                        </a>
+                    </li>
+
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/test3.jpg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Football Round of 16</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>25 July</p>
+                                <p>The Gabba</p>
+                            </div> 
+                        </a>
+                    </li>
+
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/_test0.jpg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Event Title</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>Date: [Event Date]</p>
+                                <p>Location: [Event Location]</p>
+                            </div> 
+                        </a>
+                    </li>
+                    <!-- Add more event cards as needed -->
+                </ol>
+            </section>
+        
+            <h2 id="upcomingevents">Upcoming Events</h2>
+            <section class="event-section">
+                
+                <!-- Add upcoming event content here -->
+                <ol class="event">
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/test1.jpg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Man's 100 meters freestyle</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>25 July</p>
+                                <p>Brisbane Aquatic Centre</p>
+                            </div>  
+                        </a>
+                    </li>
+
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/test2.jpg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Event Title</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>Date: [Event Date]</p>
+                                <p>Location: [Event Location]</p>
+                            </div>  
+                        </a>
+                    </li>
+
+                    <li class="event-card">
+                        <a href="">
+                            <img class="event-card-background" src="/images/_test1.jpg" alt="test img">
+                            <div class="event-card-text event-title">
+                                <h3>Event Title</h3>
+                            </div>
+                            <div class="event-card-text event-info">
+                                <p>Date: [Event Date]</p>
+                                <p>Location: [Event Location]</p>
+                            </div>
+                        </a>
+                    </li>
+                    <!-- Add more event cards as needed -->
+                </ol>
+            </section>
+        
+            <h2 id="news">News</h2>
+            <section class="news-section">
+                <div class="news">
+                    <img class="news-image" src="/images/news/opening.jpg" alt="news image">
+                    <div class="news-info">
+                        <a href="">
+                            <h4 class="news-heading">
+                                Grand Opening Ceremony Marks the Commencement of the 2032 Brisbane Olympics
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="news">
+                    <img class="news-image" src="/images/news/badmintonGold.jpg" alt="news image">
+                    <div class="news-info">
+                        <a href="">
+                            <h4 class="news-heading">
+                                Olympics-Badminton-Denmark's Axelsen bags men's singles gold!
+                            </h4>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="banner bottom-banner">
+        <!-- Bottom banner content here -->
+            <div></div>
+            <!-- Home page button -->
+            <div class="circle">
+                <a href="index.html"><img id="btn" src="/img/home.png" alt="#"></a>
+            </div>
+            <!-- Search page button -->
+            <div class="circle two">
+                <a href="#"><img id="btn" src="/img/calendar.png" alt="#"></a>
+            </div>
+            <!-- Profile page button -->
+            <div class="circle thr">
+                <a href="login.html"><img id="btn" src="/img/profile.png" alt="#"></a>
+            </div>
+            <!-- Light bulb page button -->
+            <div class="circle four">
+                <a href="tips.html"><img id="btn" src="/img/light-bulb.png" alt="#"></a>
+            </div>
+            <!-- Translation page button -->
+            <div class="circle fiv">
+                <a href="translation_page.html"><img id="btn" src="/img/language.png" alt="#"></a>
+            </div>
+            <div></div>
+        
+    </footer>
+    <script src="features.js"></script>
+</body>
+</html>
